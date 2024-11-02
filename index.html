@@ -1,152 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Responsive Admin Dashboard</title>
-    <!-- ======= Styles ====== -->
-    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Signup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <body>
-    <!-- =============== Navigation ================ -->
-    <div class="container">
-      <div class="navigation">
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon">
-                <ion-icon name="home" ></ion-icon>
-              </span>
-              <span class="title">Smart Public Toilet </span>
-            </a>
-          </li>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f7fa;
+    }
 
-          <li>
-            <a href="index.html">
-              <span class="icon">
-                <ion-icon name="home-outline"></ion-icon>
-              </span>
-              <span class="title">Dashboard</span>
-            </a>
-          </li>
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 350px;
+      text-align: center;
+    }
 
-          <li>
-            <a href="register.html">
-              <span class="title">register</span>
-            </a>
-          </li>
+    h2 {
+      margin-bottom: 20px;
+    }
 
-          <li>
-            <a href="transaction.html">
-              <span class="title">Transaction</span>
-            </a>
-          </li>
+    .input-group {
+      margin-bottom: 15px;
+    }
 
-          <li>
-            <a href="withdraw.html">
-              <span class="title">withdraw</span>
-            </a>
-          </li>
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
 
-          <li>
-            <a href="Settings.html">
-              <span class="title">Settings</span>
-            </a>
-          </li>
+    .input-group input:focus {
+      outline: none;
+      border-color: #45a049;
+    }
 
-          <li>
-            <a href="login.html">
-              <span class="icon">
-                <ion-icon name="log-out-outline"></ion-icon>
-              </span>
-              <span class="title">Logout</span>
-            </a>
-          </li>
-        </ul>
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #45a049;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      
+    }
+    .btnLink {
+      text-decoration: none;
+      
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .toggle-link {
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .toggle-link a {
+      text-decoration: none;
+      color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .success {
+      color: green;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="loginCard">
+    <h2 id="formTitle">Login</h2>
+    <div id="errorMessage" class="error"></div>
+    <div id="successMessage" class="success"></div>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="text" id="loginEmail" placeholder="Email" required>
       </div>
-
-      <!-- ========================= Main ==================== -->
-      <div class="main">
-        <div class="topbar">
-          <div class="toggle">
-            <ion-icon name="menu-outline"></ion-icon>
-          </div>
-
-          <div class="search">
-            <label>
-              <input type="text" placeholder="Search here" />
-              <ion-icon name="search-outline"></ion-icon>
-            </label>
-          </div>
-
-          <div class="user">
-            <img src="assets/imgs/customer01.jpg" alt="" />
-          </div>
-        </div>
-
-        <!-- ======================= Cards ================== -->
-        <div class="cardBox">
-          <div class="card">
-            <div>
-              <div id="users">0</div>
-              <div class="cardName">Total Users</div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div>
-              <div class="numbers">4</div>
-              <div class="cardName">Total Toilets</div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div>
-              <div id="numbers">0</div>
-              <div class="cardName">Total Amount</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ================ Order Details List ================= -->
-        <div class="details">
-          <div class="recentOrders">
-            <div class="cardHeader">
-              <h2>Recent</h2>
-              <a href="#" class="btn">View All</a>
-            </div>
-
-            <table>
-              <thead>
-                <tr>
-                  <td>Card No</td>
-                  <td>Wallet (Rwf)</td>
-                  <td>Email</td>
-                  <!-- <td>Role</td> -->
-                </tr>
-              </thead>
-
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
+      <div class="input-group">
+        <input type="password" id="loginPassword" placeholder="Password" required>
       </div>
-    </div>
+      <!-- <button type="submit" class="btn">Login</button> -->
+      <a class="btnLink" href="home.html"><div class="btn">Login</div></a>
+      <div class="toggle-link" id="toggleLink">Don't have an account? <a href="sign_up.html">Sign Up</a></div>
+    </form>
 
-    <!-- =========== Scripts =========  -->
-    <script src="assets/js/main.js"></script>
+    <!-- Signup Form-->
+   <!---- <form id="signupForm" style="display: none;">
+      <div class="input-group">
+        <input type="text" id="signupEmail" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="signupPassword" placeholder="Password" required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit" class="btn">Signup</button>
+    </form>
 
-    <!-- ====== ionicons ======= -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+    <div class="toggle-link" id="toggleLink">Don't have an account? <a href="sign_up.html">Sign Up</a></div>
+  </div> -->
+
+  <!-- <script src="signup.js"></script> -->
+</body>
 </html>
