@@ -66,10 +66,17 @@
     .btn:hover {
       background-color: #45a049;
     }
+    /* .btn a{
+      text-decoration: none;
+      color: white;
+    } */
 
     .toggle-link {
       margin-top: 10px;
       cursor: pointer;
+    }
+    .toggle-link a{
+      color: #45a049;
     }
 
     .card a {
@@ -91,7 +98,7 @@
 </head>
 <body>
   <div class="card" id="loginCard">
-    <h2 id="formTitle">Login</h2>
+    <h2 id="formTitle">Sign Up</h2>
     <div id="errorMessage" class="error"></div>
     <div id="successMessage" class="success"></div>
 
@@ -103,11 +110,13 @@
       <div class="input-group">
         <input type="password" id="loginPassword" placeholder="Password" required>
       </div>
-      <button type="submit" class="btn">Login</button>
+      <!-- <button type="submit" class="btn">Sign Up</button> -->
+      <a href="login.html"><div class="btn">Sign Up</div></a>
+      <div class="toggle-link" id="toggleLink">Don't have an account? <a href="login.html">Login</a></div>
     </form>
 
     <!-- Signup Form -->
-    <form id="signupForm" style="display: none;">
+    <!-- <form id="signupForm" style="display: none;">
       <div class="input-group">
         <input type="text" id="signupEmail" placeholder="Email" required>
       </div>
@@ -116,13 +125,14 @@
       </div>
       <div class="input-group">
         <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-      </div>
-      <button type="submit" class="btn">Signup</button>
-    </form>
+      </div> -->
+      <!-- <button type="submit" class="btn" >Sign Up</button> -->
+       <!-- <div><a class="btn" href="login.html">Sign Up</a></div> -->
+    <!-- </form>
 
-    <div class="toggle-link" id="toggleLink">Don't have an account? <a href="#">Sign Up</a></div>
-  </div>
+    <div class="toggle-link" id="toggleLink">Don't have an account? <a href="login.html">Login</a></div>
+  </div> -->
 
-  <script src="./assets/js/signup.js"></script>
+  <!-- <script src="./assets/js/signup.js"></script> -->
 </body>
 </html>

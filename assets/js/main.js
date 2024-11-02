@@ -64,7 +64,7 @@ function getIdFromUrl() {
   return urlParams.get("id");
 }
 
-addAmount.addEventListener("click", function (event) {
+amount.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
   const id = getIdFromUrl();

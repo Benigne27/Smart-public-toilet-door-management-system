@@ -61,6 +61,11 @@
       cursor: pointer;
       font-size: 16px;
       margin-top: 10px;
+      
+    }
+    .btnLink {
+      text-decoration: none;
+      
     }
 
     .btn:hover {
@@ -104,11 +109,13 @@
       <div class="input-group">
         <input type="password" id="loginPassword" placeholder="Password" required>
       </div>
-      <button type="submit" class="btn">Login</button>
+      <!-- <button type="submit" class="btn">Login</button> -->
+      <a class="btnLink" href="index.html"><div class="btn">Login</div></a>
+      <div class="toggle-link" id="toggleLink">Don't have an account? <a href="sign_up.html">Sign Up</a></div>
     </form>
 
-    <!-- Signup Form -->
-    <form id="signupForm" style="display: none;">
+    <!-- Signup Form-->
+   <!---- <form id="signupForm" style="display: none;">
       <div class="input-group">
         <input type="text" id="signupEmail" placeholder="Email" required>
       </div>
@@ -121,9 +128,9 @@
       <button type="submit" class="btn">Signup</button>
     </form>
 
-    <div class="toggle-link" id="toggleLink">Don't have an account? <a href="#">Sign Up</a></div>
-  </div>
+    <div class="toggle-link" id="toggleLink">Don't have an account? <a href="sign_up.html">Sign Up</a></div>
+  </div> -->
 
-  <script src="signup.js"></script>
+  <!-- <script src="signup.js"></script> -->
 </body>
 </html>
