@@ -21,8 +21,8 @@ registerCard.addEventListener("click", function (event) {
         throw new Error(`HTTP error status: ${response.status}`);
       }
       alert("Card registered successfully");
-    //   window.location.href = "/Smart-public-toilet-door-register-system/index.html";
-      window.location.href = "/Smart-public-toilet-door-management-system/index.html";
+    //   window.location.href = "/Smart-public-toilet-door-register-system/home.html";
+      window.location.href = "/Smart-public-toilet-door-management-system/home.html";
     } catch (error) {
       console.error("Error:", error);
     }

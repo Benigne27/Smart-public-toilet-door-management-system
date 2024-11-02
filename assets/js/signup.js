@@ -24,7 +24,7 @@ function toggleForm() {
 }
 
 // Login User Function
-async function loginUser(event) {
+// async function loginUser(event) {
 //   event.preventDefault();
 
 //   const email = document.getElementById("loginEmail").value;
@@ -47,7 +47,7 @@ async function loginUser(event) {
 // //     if (response.ok) {
 // //       displayMessage("successMessage", "Login successful!");
 // //       setTimeout(() => {
-// //         window.location.href = 'index.html';  // Navigate to index.html after successful login
+// //         window.location.href = 'home.html';  // Navigate to home.html after successful login
 // //       }, 1000);  // 1-second delay for UX improvement
 // //     } else {
 // //       displayMessage("errorMessage", data.message || "Login failed.");

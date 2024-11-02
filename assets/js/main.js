@@ -86,8 +86,8 @@ amount.addEventListener("click", function (event) {
         throw new Error(`HTTP error status: ${response.status}`);
       }
       alert("Amount added successfully");
-      window.location.href = "/index.html";
-      // window.location.href = "/index.html";
+      window.location.href = "/home.html";
+      // window.location.href = "/home.html";
     } catch (error) {
       console.error("Error:", error);
     }
