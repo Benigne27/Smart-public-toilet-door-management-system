@@ -4,7 +4,7 @@ let registerCard = document.getElementById("registerCard");
 
 registerCard.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent the form from submitting normally
-  const url = `http://localhost:4000/signup/?username=${carduuid.value}`;
+  const url = `https://sptdms-bn.onrender.com/signup/?username=${carduuid.value}`;
   // const url = http://handsome-puce-snapper.cyclic.app/transact/?id=${id}&op=sub&amount=${amount.value};
   let registerCardFunc = async () => {
     try {
