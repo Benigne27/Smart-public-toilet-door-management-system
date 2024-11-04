@@ -82,7 +82,7 @@ amount.addEventListener("click", function (event) {
       });
 
       if (!response.ok) {
-        alert(`HTTP error status: ${response.status}`);
+        alert(`HTTP error status: ${response.status} - ${errorMessage}`);
         throw new Error(`HTTP error status: ${response.status}`);
       }
       alert("Amount added successfully");
