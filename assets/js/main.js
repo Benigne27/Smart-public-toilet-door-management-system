@@ -1,6 +1,6 @@
 let list = document.querySelectorAll(".navigation li");
 let button = document.querySelectorAll(".signup-btn");
-let amount = document.getElementById("amount");
+let amount = document.querySelector("#amount");
 let numbersDiv = document.getElementById("numbers");
 let usersDiv = document.getElementById("users");
 
@@ -82,7 +82,7 @@ amount.addEventListener("click", function (event) {
       });
 
       if (!response.ok) {
-        alert("error");
+        alert(`HTTP error status: ${response.status}`);
         throw new Error(`HTTP error status: ${response.status}`);
       }
       alert("Amount added successfully");
